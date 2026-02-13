@@ -1,6 +1,6 @@
-# FreshMart — Grocery Shopping App 🛒
+# FreshMart — Grocery Shopping App 
 
-A full-stack grocery shopping application built with **Django REST Framework** (backend) and **React Native + Expo** (frontend), featuring Pakistani products, email OTP verification, and Cash on Delivery.
+A full-stack grocery shopping application built with **Django REST Framework** (backend) and **React Native + Expo** (frontend), featuring products, email OTP verification, and Cash on Delivery.
 
 ## Tech Stack
 
@@ -121,6 +121,6 @@ The app includes:
 - Shopping cart with item management
 - Order history
 
----
 
-Built with ❤️ for Pakistan 🇵🇰
+
+
