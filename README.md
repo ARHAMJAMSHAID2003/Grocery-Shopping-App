@@ -46,7 +46,7 @@ A full-stack grocery shopping application built with **Django REST Framework** (
 ### 1. Database
 
 ```bash
-# Create the database and import the dump
+# Create the database and import the dump from database_setup.sql
 mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS grocery_db;"
 mysql -u root -p grocery_db < database_setup.sql
 ```
