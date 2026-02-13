@@ -7,7 +7,8 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import (
     ProductViewSet, UserViewSet, CartViewSet, OrderViewSet,
-    OrderItemsViewSet, StoresViewSet, LocationsViewSet, register, login
+    OrderItemsViewSet, StoresViewSet, LocationsViewSet, register, login,
+    send_otp, verify_otp, resend_otp
 )
 
 router = DefaultRouter()
@@ -23,4 +24,7 @@ urlpatterns = [
     path('', include(router.urls)),
     path('register/', register, name='register'),
     path('login/', login, name='login'),
+    path('send-otp/', send_otp, name='send-otp'),
+    path('verify-otp/', verify_otp, name='verify-otp'),
+    path('resend-otp/', resend_otp, name='resend-otp'),
 ]

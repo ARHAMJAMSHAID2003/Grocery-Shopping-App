@@ -83,6 +83,7 @@ class Cart(models.Model):
     product = models.ForeignKey('Products', models.DO_NOTHING)
     quantity = models.IntegerField()
     added_at = models.DateTimeField(blank=True, null=True)
+    size = models.CharField(max_length=20, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -221,3 +222,15 @@ class Users(models.Model):
     class Meta:
         managed = False
         db_table = 'users'
+
+
+class EmailOtp(models.Model):
+    id = models.AutoField(primary_key=True)
+    email = models.CharField(max_length=255)
+    otp = models.CharField(max_length=6)
+    created_at = models.DateTimeField(auto_now_add=True)
+    is_verified = models.BooleanField(default=False)
+
+    class Meta:
+        managed = False
+        db_table = 'email_otp'

@@ -130,12 +130,28 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+from datetime import timedelta
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
 }
 
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=7),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
+}
+
 CORS_ALLOW_ALL_ORIGINS = True
 ## for development puropose only.
+
+# Email settings for OTP verification
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'arham.jamshaid@2023.cedar.edu.pk'
+EMAIL_HOST_PASSWORD = 'hops ssnf eubv ymxm'
+DEFAULT_FROM_EMAIL = 'FreshMart <arham.jamshaid@2023.cedar.edu.pk>'
 
