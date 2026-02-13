@@ -23,6 +23,10 @@ fix_tables.py
 load_to_mysql.py
 setup_mysql.py
 
+# Data files (not needed to run the project)
+dataanalysis.ipynb
+*.csv
+
 # Expo / React Native
 .expo/
 node_modules/
