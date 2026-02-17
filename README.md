@@ -38,7 +38,7 @@ A full-stack grocery shopping application built with **Django REST Framework** (
 ├── requirements.txt        # Python dependencies
 ├── manage.py               # Django management
 ├── *.csv                   # Raw dataset files
-└── dataanalysis.ipynb      # Jupyter notebook (data exploration)
+
 ```
 
 ## Setup Instructions
