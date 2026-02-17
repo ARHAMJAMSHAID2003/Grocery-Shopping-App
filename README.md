@@ -2,13 +2,23 @@
 
 A full-stack grocery shopping application built with **Django REST Framework** (backend) and **React Native + Expo** (frontend), featuring products, email OTP verification, and Cash on Delivery.
 
+---
+
+**2026 Update:**
+- Now uses **SQLite** by default for easy setup (no MySQL required for development)
+- **Paste Shopping List**: Copy a list of items (e.g. from WhatsApp), paste in the app, and products are auto-matched and added to cart
+- **Clickable Cart Items**: Tap any cart item to view and change its quantity/size in the product detail screen
+- **Comprehensive Product Population**: 100+ products, English & Roman Urdu, with images (see `populate_all.py`)
+
+---
+
 ## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
 | Backend | Django 5.2, Django REST Framework, SimpleJWT |
 | Frontend | React Native 0.81, Expo SDK 54, React Navigation |
-| Database | MySQL 8.0 |
+| Database | SQLite (default), MySQL (optional) |
 | Auth | JWT (access + refresh tokens), Email OTP verification |
 
 ## Features
@@ -24,6 +34,8 @@ A full-stack grocery shopping application built with **Django REST Framework** (
 - **Cash on Delivery** payment
 - Responsive on web and mobile (iOS/Android via Expo Go)
 - All prices in **PKR**
+- **Paste Shopping List**: Paste a text list and auto-add products to cart
+- **Clickable Cart Items**: Tap cart items to edit in product detail
 
 ## Project Structure
 
