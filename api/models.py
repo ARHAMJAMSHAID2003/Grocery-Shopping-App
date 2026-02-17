@@ -86,7 +86,7 @@ class Cart(models.Model):
     size = models.CharField(max_length=20, blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'cart'
 
 
@@ -144,7 +144,7 @@ class Locations(models.Model):
     region = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'locations'
 
 
@@ -157,7 +157,7 @@ class OrderItems(models.Model):
     subtotal = models.FloatField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'order_items'
 
 
@@ -173,7 +173,7 @@ class Orders(models.Model):
     delivery_time = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'orders'
 
 
@@ -190,7 +190,7 @@ class Products(models.Model):
     image_url = models.CharField(max_length=500, blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'products'
 
 
@@ -204,7 +204,7 @@ class Stores(models.Model):
     opening_hours = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'stores'
 
 
@@ -220,7 +220,7 @@ class Users(models.Model):
     age = models.BigIntegerField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'users'
 
 
@@ -232,5 +232,5 @@ class EmailOtp(models.Model):
     is_verified = models.BooleanField(default=False)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'email_otp'

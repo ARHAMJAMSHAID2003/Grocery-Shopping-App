@@ -8,7 +8,7 @@ from rest_framework.routers import DefaultRouter
 from .views import (
     ProductViewSet, UserViewSet, CartViewSet, OrderViewSet,
     OrderItemsViewSet, StoresViewSet, LocationsViewSet, register, login,
-    send_otp, verify_otp, resend_otp
+    send_otp, verify_otp, resend_otp, parse_shopping_list, bulk_add_to_cart
 )
 
 router = DefaultRouter()
@@ -27,4 +27,6 @@ urlpatterns = [
     path('send-otp/', send_otp, name='send-otp'),
     path('verify-otp/', verify_otp, name='verify-otp'),
     path('resend-otp/', resend_otp, name='resend-otp'),
+    path('parse-shopping-list/', parse_shopping_list, name='parse-shopping-list'),
+    path('bulk-add-to-cart/', bulk_add_to_cart, name='bulk-add-to-cart'),
 ]

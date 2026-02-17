@@ -4,7 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const BASE_URL = Platform.OS === 'web'
   ? 'http://localhost:8000/api'
-  : 'http://192.168.18.246:8000/api';
+  : 'http://localhost:8000/api';  // Change to your computer's IP if needed
 
 const api = axios.create({ baseURL: BASE_URL });
 
@@ -37,5 +37,9 @@ export const removeFromCart = (id) => api.delete(`/cart/${id}/`);
 export const createOrder = (data) => api.post('/orders/', data);
 export const getOrders = (userId) => api.get(`/orders/?user_id=${userId}`);
 export const getOrderItems = (orderId) => api.get(`/order-items/?order_id=${orderId}`);
+
+// Shopping List Parser
+export const parseShoppingList = (data) => api.post('/parse-shopping-list/', data);
+export const bulkAddToCart = (data) => api.post('/bulk-add-to-cart/', data);
 
 export default api;

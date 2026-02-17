@@ -66,7 +66,9 @@ export default function LoginScreen({ navigation }) {
         setOtpTimer(60); // 60 second cooldown for resend
       }
     } catch (err) {
-      const msg = err.response?.data?.error || err.response?.data?.detail || 'Something went wrong';
+      console.log('Login error:', err);
+      console.log('Error response:', err.response);
+      const msg = err.response?.data?.error || err.response?.data?.detail || err.message || 'Something went wrong';
       showMsg('Error', msg);
     } finally {
       setLoading(false);
